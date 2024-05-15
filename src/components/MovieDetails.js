@@ -40,11 +40,13 @@ const MovieDetails = () => {
           <p>
             <strong>Original Title:</strong> {movieDetails.original_title}
           </p>
-          <p>
-            <strong>Release Date:</strong> {movieDetails.release_date}
-          </p>
+
           <p>
             <strong>Overview:</strong> {movieDetails.overview}
+          </p>
+          <hr />
+          <p>
+            <strong>Release Date:</strong> {movieDetails.release_date}
           </p>
           <p>
             <strong>Popularity:</strong> {movieDetails.popularity.toFixed(2)}
