@@ -1,38 +1,168 @@
-.App {
-  text-align: center;
+body {
+    background: #141414;
+    color: #ffffff;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.movie-app > .row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between; /* Distribute items evenly */
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.image-container {
+    position: relative;
+    transition: transform 0.2s;
+    width: calc(20% - 10px); /* Adjust width and spacing as needed */
+    margin-bottom: 20px; /* Add space between movie containers */
+    box-sizing: border-box; /* Ensure box-sizing includes padding and border */
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.image-container img {
+    max-width: 100%;
+    max-height: 100%;
+    height: auto;
 }
 
-.App-link {
-  color: #61dafb;
+.image-container:hover {
+    cursor: pointer;
+    transform: scale(1.1);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.image-container:hover .overlay {
+    opacity: 1;
+}
+
+.overlay {
+    position: absolute;
+    background: rgba(0, 0, 0, 0.8);
+    width: 100%;
+    transition: 0.5s ease;
+    opacity: 0;
+    bottom: 0;
+    font-size: 20px;
+    padding: 20px;
+    text-align: center;
+}
+
+.col {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    background-color: #333;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container {
+    max-width: 1200px;
+    margin: auto;
+}
+
+.row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+@media (max-width: 768px) {
+    .row {
+        flex-direction: column;
+    }
+}
+
+/* App.css or index.css */
+.jumbotron-custom {
+    background-size: cover;
+    background-position: center;
+    color: #ffffff; /* Change font color */
+    padding: 30px 0px; /* Adjust padding */
+}
+
+/* App.css */
+.about-section {
+    font-size: 18px; /* Increase font size for better readability */
+    width: 80%; /* Set a maximum width for the section */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: Add a subtle shadow for depth */
+    padding: 30px 40px; /* Increase padding for spacing around content */
+}
+
+.movie-details-card {
+    max-width: 800px;
+    margin: 50px auto;
+    background-color: #141414; /* white */
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+}
+
+.card-header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.card-header h2 {
+    font-size: 24px;
+    margin: 0;
+}
+
+.poster {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.details {
+    margin-top: 20px;
+}
+
+.details p {
+    margin: 10px 0;
+    line-height: 1.5;
+}
+
+.details p strong {
+    font-weight: bold;
+}
+
+.details p:last-child {
+    margin-bottom: 0;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+.dropdown-menu li {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-menu li:hover {
+    background-color: #f1f1f1;
+}
+
+.dropdown:hover.dropdown-menu {
+    display: block;
 }
