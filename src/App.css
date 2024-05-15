@@ -166,3 +166,15 @@ body {
 .dropdown:hover.dropdown-menu {
     display: block;
 }
+
+a,
+a:visited {
+    text-decoration: none;
+    color: #ffd700; /* Example: Change to gold on hover */
+}
+
+a:hover {
+    color: #32cd32; /* A nice shade of green */
+
+    text-decoration: underline;
+}
