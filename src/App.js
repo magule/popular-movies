@@ -15,7 +15,7 @@ const App = () => {
   const [movies, setMovies] = useState([]);
 
   const getPopularMovies = async () => {
-    const url = `https://api.themoviedb.org/3/discover/movie?include_adult=false&include_video=false&language=en-US&page=1&sort_by=popularity.desc&api_key=b9755085a1372f833a8f6b6a50c5bf19`;
+    const url = `https://api.themoviedb.org/3/discover/movie?include_adult=false&include_video=false&language=en-US&page=1&sort_by=popularity.desc&api_key=${process.env.REACT_APP_TMDB_API_KEY}`;
 
     const response = await fetch(url);
     const responseJson = await response.json();
